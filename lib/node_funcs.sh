@@ -4,6 +4,6 @@ mkdir -p /app/.platform_tools/phantomjs
 cd /app/.platform_tools/phantomjs
 tar xvjf ${cache_path}/phantom.tar.bz2 
 mv phantomjs-2.1.1-linux-x86_64 phantomjs
-cd phantomjs
-echo "--------------- listing ------------------- $(pwd)"
-ls
+PATH=/app/.platform_tools/phantomjs/phantomjs/bin:${PATH}
+phantomjs --version
+echo "----------------- installed phantomjs ----------------------"
