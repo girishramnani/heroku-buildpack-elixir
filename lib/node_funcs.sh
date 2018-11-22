@@ -3,5 +3,7 @@ wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_6
 mkdir -p /app/.platform_tools/phantomjs
 cd /app/.platform_tools/phantomjs
 tar xvjf ${cache_path}/phantom.tar.bz2 
-echo "--------------- listing -------------------"
+mv phantomjs-2.1.1-linux-x86_64 phantomjs
+cd phantomjs
+echo "--------------- listing ------------------- $(pwd)"
 ls
