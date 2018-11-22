@@ -18,6 +18,14 @@ function elixir_path() {
   echo "$(platform_tools_path)/elixir"
 }
 
+function node_path() {
+  echo "$(platform_tools_path)/node"
+}
+
+function phantomjs_path() {
+  echo "$(platform_tools_path)/phantomjs"
+}
+
 function erlang_build_path() {
   echo "${cache_path}/erlang"
 }
