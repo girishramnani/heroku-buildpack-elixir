@@ -133,7 +133,6 @@ function write_profile_d_script() {
   mkdir -p $build_path/.profile.d
 
   local export_line="export PATH=/.platform_tools:\$HOME/.platform_tools/erlang/bin:\$HOME/.platform_tools/elixir/bin:\$PATH
-                     export PATH=\$HOME/.platform_tools/phantomjs/phantomjs/bin:\$HOME/.platform_tools/node/node/bin:\$PATH
                      export LC_CTYPE=en_US.utf8"
 
   # Only write MIX_ENV to profile if the application did not set MIX_ENV
@@ -149,7 +148,6 @@ function write_export() {
   output_section "Writing export for multi-buildpack support"
 
   local export_line="export PATH=$(platform_tools_path):$(erlang_path)/bin:$(elixir_path)/bin:\$PATH
-                     export PATH=\$HOME/.platform_tools/phantomjs/phantomjs/bin:\$HOME/.platform_tools/node/node/bin:\$PATH
                      export LC_CTYPE=en_US.utf8"
 
   # Only write MIX_ENV to export if the application did not set MIX_ENV
